@@ -44,6 +44,7 @@ function displayResult(numberGuess) {
   } else if (numberGuess > correctNumber) {
     return "Too high";
   } else {
+    showYouWon();
     return "correct";
   }
 }
@@ -123,6 +124,7 @@ function showYouWon() {
    * HINT: Use the 'won' and text parameters
    */
   // *CODE GOES BELOW HERE *
+  let dialog = getDialog("won", text);
 
   document.getElementById("result").innerHTML = dialog;
 }
