@@ -40,8 +40,10 @@ function playGame() {
 
 function displayResult(numberGuess) {
   if (numberGuess < correctNumber) {
+    showNumberBelow();
     return "Too Low";
   } else if (numberGuess > correctNumber) {
+    showNumberAbove();
     return "Too high";
   } else {
     showYouWon();
@@ -137,6 +139,7 @@ function showNumberAbove() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
+  let dialog = getDialog("warning", text);
 
   document.getElementById("result").innerHTML = dialog;
 }
@@ -149,6 +152,7 @@ function showNumberBelow() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
+  let dialog = getDialog("warning", text);
 
   document.getElementById("result").innerHTML = dialog;
 }
